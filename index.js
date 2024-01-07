@@ -1,16 +1,19 @@
 // TODO: Include packages needed for this application
+const fs = require('fs'); // this is a node module that is basic requirement
+const inquirer = require('inquirer'); // Inquire is special software that must be downloaded/installed from npm
+const generateMarkdown = require('./utils/generateMarkdown.js'); // pulls whatever is in the generate markdown in
+const path = require('path'); // this is how the prompts gets put into the generate markdown file
 
 // TODO: Create an array of questions for user input
-inquirer 
-    .prompt {[
+const prompts = inquirer [
     { 
         type:'input',
-        name:'title',
+        name:'Title',
         message: 'What is the name of your project?'
     },
     {
         type:'input',
-        name: 'Description'
+        name: 'Description',
         message: 'What is the description of your project?'
 
     },
@@ -61,26 +64,27 @@ inquirer
     },
     {
         type:'input',
-        name: 'Contribution', 
+        name: 'Contributors', 
         message:' List here how you would like other developers to contribute',
     },
     {
         type:'input',
-        name: 'Tests',
-        message: 'Include tests steps for your application.'
+        name: 'Testing',
+        message: 'Include tests steps for your application.',
     }
-    ]}
-    
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+    ]    
 
 // TODO: Create a function to initialize app
 function init() {
-    const fs = require{'fs'};
-    cosnt inquirer = require{`./utils/generateMarkdown.js`};
-    const generate = require{''}
+ inquirer.prompt(prompts).then(responses) => {
+    console.log("Creating Professional README.jd File...");
+    writeToFile("./dist/README.md",generateMarkdown({...responses}));
+ }    
 }
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
+return fs.writeFileSync(path.join(process.cmd(), fileName),data);
 
 // Function call to initialize app
 init();
