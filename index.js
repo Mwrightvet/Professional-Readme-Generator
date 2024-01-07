@@ -5,7 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown.js'); // pulls whatev
 const path = require('path'); // this is how the prompts gets put into the generate markdown file
 
 // TODO: Create an array of questions for user input
-const prompts = inquirer [
+const questions = [
     { 
         type:'input',
         name:'Title',
@@ -20,7 +20,7 @@ const prompts = inquirer [
     {
         type:'input',
         name: 'Table of Contents',
-        message: 'What is the name of your project?'
+        message: 'What is the Table of Contents of your project?'
 
     },
     {
@@ -53,7 +53,7 @@ const prompts = inquirer [
         
         type:'input',
         name: 'Badges',
-        message: 'What is the name of your project?',
+        message: 'What Badges will be included in your project?',
 
     },
     {
@@ -76,15 +76,15 @@ const prompts = inquirer [
 
 // TODO: Create a function to initialize app
 function init() {
- inquirer.prompt(prompts).then(responses) => {
+ inquirer.prompt(questions).then((responses) => {
     console.log("Creating Professional README.jd File...");
     writeToFile("./dist/README.md",generateMarkdown({...responses}));
- }    
+ });    
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-return fs.writeFileSync(path.join(process.cmd(), fileName),data);
-
+function writeToFile(fileName, data) {
+return fs.writeFileSync(path.join(process.cwd(), fileName),data);
+}
 // Function call to initialize app
 init();
