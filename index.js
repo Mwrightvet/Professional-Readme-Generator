@@ -51,8 +51,9 @@ const questions = [
     },
     {
         
-        type:'input',
+        type:'checkbox',
         name: 'Badges',
+        choices:["MIT", "Apache"],
         message: 'What Badges will be included in your project?',
 
     },
@@ -71,7 +72,18 @@ const questions = [
         type:'input',
         name: 'Testing',
         message: 'Include tests steps for your application.',
-    }
+    },
+    {
+
+    type: "input",
+    name: "Username",
+    message: "Enter your Github user name",
+  },
+  {
+    type: "input",
+    name: "Email",
+    message: "What is your email address?",
+  }
     ]    
 
 // TODO: Create a function to initialize app
