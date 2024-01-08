@@ -83,7 +83,12 @@ const questions = [
     type: "input",
     name: "Email",
     message: "What is your email address?",
-  }
+},
+{
+  type: "input",
+  name: "Repo",
+  message: "What is your github repo?",
+}
     ]    
 
 // TODO: Create a function to initialize app

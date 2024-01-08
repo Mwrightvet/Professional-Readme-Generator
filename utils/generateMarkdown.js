@@ -1,6 +1,10 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-
-const { linkClasses } = require("@mui/material");
+function renderLicenseBadge(license) {
+  if (license !== "none") {
+    return `![Github license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return "";
+}
 
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -26,7 +30,7 @@ function renderLicenseLink(license) {
   } else if (license === "MIT") {
     const licenseLink = `https://opensource.org/licenses/MIT`;
   } else if (license !== "none") {
-    return `\n [license](#license)\n`;
+    return `\n [license](#License)\n`;
   }
   return "";  //return an empty string if there is no license. 
 }
@@ -56,7 +60,6 @@ ${renderLicenseBadge(data.Badges)}
 - [Contributors](#Contributors)
 - [Testing](#Testing)
 - [Questions](#Questions)
-${renderLicenseBadge(data.License)}
 ## Description 
 ${data.Description}
 ## Installation
@@ -72,7 +75,7 @@ ${data.Contributors}
 ## Testing
 ${data.Testing}
 ## Questions
-For Any questions: Contact ${data.Username} ${data.Email}
+For Any questions: Contact ${data.Username} at ${data.Email} or visit ${data.Repo}
 `;
 }
 
