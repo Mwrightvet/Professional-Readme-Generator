@@ -7,7 +7,7 @@ by Melissa Wright
 - [Usage](#Usage)
 - [Credits](#Credits)
 - [License](#License)
-- [Contributors](#Contributors)
+- [Contributors](#Contributions)
 - [DEMO](#DEMO)
  
  
@@ -31,9 +31,11 @@ This can be used to generate a profesional Readme file.
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Contributors
-N/A/ 
+## Contributions
+N/A 
 
 ## DEMO
+[![Demo](https://github.com/Mwrightvet/Professional-Readme-Generator/blob/main/Demo_%20Jan%209%202024%208_51%20PM.gif)](https://github.com/Mwrightvet/Professional-Readme-Generator/blob/main/Demo_%20Jan%209%202024%208_51%20PM.gif)
+
 
  
