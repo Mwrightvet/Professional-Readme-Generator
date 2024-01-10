@@ -75,21 +75,22 @@ const questions = [
     },
     {
 
-    type: "input",
-    name: "Username",
-    message: "Enter your Github user name",
+        type: "input",
+        name: "Username",
+        message: "Enter your Github user name",
   },
   {
-    type: "input",
-    name: "Email",
-    message: "What is your email address?",
+       type: "input",
+       name: "Email",
+       message: "What is your email address?",
 },
 {
-  type: "input",
-  name: "Repo",
-  message: "What is your github repo?",
+       type: "input",
+       name: "Repo",
+       message: "What is your github repo URL?",
 }
-    ]    
+
+]    
 
 // TODO: Create a function to initialize app
 function init() {
